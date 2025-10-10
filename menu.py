@@ -53,21 +53,24 @@ def mAsientos():
     
 #Menu BOLETOS 
 def mBoletos():
-    print("\n")
+    print("/n")
     print("|            BOLETOS              |")
     print("|  1) Consultar boleto emitido    |")
     print("|  2) Reimprimir boleto emitido   |")
     print("|  3) Listar boletos emitidos     |")
     print("|  0) Salir                       |")
 
+
 #Menu RESERVACION
 def mReservacion():
-    print("\n")
-    print("|            RESERVACIONES                   |")
-    print("|  1) Listar reservaciones                   |")
-    print("|  2) Editar reservacion                     |")
+    print("/n")
+    print("|         RESERVACION                        |")
+    print("|  1) Listar reservaciones activas           |")
+    print("|  2) Listar reservaciones pasadas           |")
+    print("|  3) Crear reservaciones (manualmente)      |")
+    print("|  4) Editar reservaciones (manualmente)     |")
     print("|  0) Salir                                  |")
-    
+
 #Menu PASAJEROS
 def mPasajeros():
     print("\n")
