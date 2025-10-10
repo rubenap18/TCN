@@ -19,7 +19,9 @@ while opcion != 0:
     opcion = val.vOpciones(" ▶  ELIGE UNA OPCION: ",0 , 8, menu.mPrincipal) #Llamando al MENU PRINCIPAL
     match opcion: 
         case 0:
-            print("Gracias por utilizar el programa")
+            print("╔═══════════════════════════════════════════╗");
+            print("║      GRACIAS POR UTILIZAR EL PROGRAMA     ║");
+            print("╚═══════════════════════════════════════════╝");
         case 1:
             while opcRutas != 0:
                 opcRutas = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5 , menu.mRutas) #Llamando al MENU RUTAS
@@ -88,35 +90,57 @@ while opcion != 0:
         
         case 5:
             while opcBoleto != 0:
-                opcBoleto = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menu.mBoletos)
+                opcBoleto = val.vOpciones("\n ▶  ELIGE UNA OPCION: ", 0, 3, menu.mBoletos)
                 match opcBoleto: 
                     case 0:
-                        print("Saliendo")
+                        print("╔═══════════════════════════════════════╗");
+                        print("║               REGRESANDO...           ║");
+                        print("╚═══════════════════════════════════════╝");
                     case 1:
-                        print("En contruccioin")
+                        print("╔═══════════════════════════════════════╗");
+                        print("║            EN CONSTRUCCION...         ║");
+                        print("╚═══════════════════════════════════════╝");
                     case 2:
-                        print("En construccion")
+                        print("╔═══════════════════════════════════════╗");
+                        print("║            EN CONSTRUCCION...         ║");
+                        print("╚═══════════════════════════════════════╝");
                     case 3:
-                        print("En construccion")
+                        print("╔═══════════════════════════════════════╗");
+                        print("║            EN CONSTRUCCION...         ║");
+                        print("╚═══════════════════════════════════════╝");
                     case _:
-                        print("Opcion inválida. Vuelva a intentar.")
+                        print("╔═══════════════════════════════════════╗");
+                        print("║   OPCION INVALIDA, INTENTA DE NUEVO   ║");
+                        print("╚═══════════════════════════════════════╝");
                         
         case 6:
             while opcReservacion != 0:
                 opcReservacion = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 4, menu.mReservacion)
                 match opcReservacion: 
                     case 0:
-                        print("Saliendo")
+                        print("╔═══════════════════════════════════════════╗");
+                        print("║                REGRESANDO...              ║");
+                        print("╚═══════════════════════════════════════════╝");
                     case 1:
-                        print("En contruccioin")
+                        print("╔═══════════════════════════════════════════╗");
+                        print("║              EN CONSTRUCCION...           ║");
+                        print("╚═══════════════════════════════════════════╝");
                     case 2:
-                        print("En construccion")
+                        print("╔═══════════════════════════════════════════╗");
+                        print("║              EN CONSTRUCCION...           ║");
+                        print("╚═══════════════════════════════════════════╝");
                     case 3:
-                        print("En construccion")
+                        print("╔═══════════════════════════════════════════╗");
+                        print("║              EN CONSTRUCCION...           ║");
+                        print("╚═══════════════════════════════════════════╝");
                     case 4:
-                        print("En construccion")    
+                        print("╔═══════════════════════════════════════════╗");
+                        print("║              EN CONSTRUCCION...           ║");
+                        print("╚═══════════════════════════════════════════╝");
                     case _:
-                        print("Opcion inválida. Vuelva a intentar.")
+                        print("╔═══════════════════════════════════════════╗");
+                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║");
+                        print("╚═══════════════════════════════════════════╝");
 
         case 7:
             while opcPasajeros != 0:
@@ -153,4 +177,6 @@ while opcion != 0:
                         print("Opcion inválida. Vuelva a intentar.")
                         
         case _:
-            print("Opcion inválida. Vuelva a intentar.")
+            print("╔═══════════════════════════════════════════╗");
+            print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║");
+            print("╚═══════════════════════════════════════════╝");
