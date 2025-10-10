@@ -19,42 +19,53 @@ def mPrincipal():
 
     
 def mRutas():
-    print("\n")
-    print("|           RUTAS           |")
-    print("|  1) Consultar rutas       |")
-    print("|  2) Modificar ruta        |") #Dentro de esta opcion se va a preguntar la ciudad origen y el destino
-    print("|  3) Consultar escalas     |")
-    print("|  4) Modificar escalas     |") #Dentro de esta opcion se va a preguntar en donde se va a hacer cada escala y mientras se vayan agregando escalas se va a sacar la cant de escalas
-    print("|  5) Eliminar rutas        |")
-    print("|  0) Salir                 |")
+    print('\n')
+    print("╔═══════════════════════════════════════════╗");
+    print("║                    RUTAS                  ║");
+    print("╠═══════════════════════════════════════════╣");
+    print("║  1. ▶  Consultar rutas                    ║");
+    print("║  2. ▶  Modificar ruta                     ║");
+    print("║  3. ▶  Consultar escalas                  ║");
+    print("║  4. ▶  Modificar escalas                  ║");
+    print("║  5. ▶  Eliminar rutas                     ║");
+    print("║  0. ▶  Regresar al menu principal         ║");
+    print("╚═══════════════════════════════════════════╝"); 
 
 def mCorridas():
-    print("")
-    print("|         CORRIDAS         |")
-    print("|  1) Consultar corridas   |")
-    print("|  2) Agregar corrida      |")
-    print("|  3) Eliminar corrida     |")
-    print("|  0) Salir                |")
+    print('\n')
+    print("╔═══════════════════════════════════════════╗");
+    print("║                  CORRIDAS                 ║");
+    print("╠═══════════════════════════════════════════╣");
+    print("║  1. ▶  Consultar corridas                 ║");
+    print("║  2. ▶  Agregar corrida                    ║");
+    print("║  3. ▶  Eliminar corrida                   ║");
+    print("║  0. ▶  Regresar al menu principal         ║");
+    print("╚═══════════════════════════════════════════╝"); 
     
 #Menu AUTOBUSES
 def mAutobuses():
-    print("\n")
-    print("|                 AUTOBUSES              |")
-    print("|  1) Agregar nuevo autobús              |")
-    print("|  2) Eliminar autobús existente         |")
-    print("|  3) Consultar autobuses disponibles    |")
-    print("|  4) Asignar autobús a corrida          |")
-    print("|  0) Salir                              |")
+    print('\n')
+    print("╔═══════════════════════════════════════════╗");
+    print("║                  AUTOBUSES                ║");
+    print("╠═══════════════════════════════════════════╣");
+    print("║  1. ▶  Agregar nuevo autobús              ║");
+    print("║  2. ▶  Eliminar autobús existente         ║");
+    print("║  3. ▶  Consultar autobuses disponibles    ║");
+    print("║  4. ▶  Asignar autobús a corrida          ║");
+    print("║  0. ▶  Regresar al menu principal         ║");
+    print("╚═══════════════════════════════════════════╝"); 
     
 #Menu ASIENTOS
 def mAsientos():
-    print("\n")
-    print("|                    ASIENTOS                      |")
-    print("|  1) Consultar disponibilidad de asiento          |")
-    print("|  2) Consultar datos del ocupante                 |")
-    print("|  3) Bloquear asiento (situaciones especiales)    |")
-    print("|  0) Salir                                        |")
-    
+    print('\n')
+    print("╔══════════════════════════════════════════════════╗");
+    print("║                       ASIENTOS                   ║");
+    print("╠══════════════════════════════════════════════════╣");
+    print("║  1. ▶  Consultar disponibilidad de asiento       ║");
+    print("║  2. ▶  Consultar datos del ocupante              ║");
+    print("║  3. ▶  Bloquear asiento (situaciones especiales) ║");
+    print("║  0. ▶  Regresar al menu principal                ║");
+    print("╚══════════════════════════════════════════════════╝"); 
 #Menu BOLETOS 
 def mBoletos():
     print('\n')
@@ -72,7 +83,7 @@ def mBoletos():
 def mReservacion():
     print('\n')
     print("╔═══════════════════════════════════════════╗");
-    print("║             RESERVACIONES                 ║");
+    print("║               RESERVACIONES               ║");
     print("╠═══════════════════════════════════════════╣");
     print("║  1. ▶  Listar reservaciones activas       ║");
     print("║  2. ▶  Listar reservaciones pasadas       ║");
@@ -83,20 +94,26 @@ def mReservacion():
 
 #Menu PASAJEROS
 def mPasajeros():
-    print("\n")
-    print("|            PASAJEROS                 |")
-    print("|  1) Consultar datos del pasajero     |")
-    print("|  2) Modificar datos del pasajero     |")
-    print("|  3) Eliminar pasajero                |")
-    print("|  4) Consultar boleto del pasajero    |")
-    print("|  0) Salir                            |")
+    print('\n')
+    print("╔═══════════════════════════════════════════╗");
+    print("║                  PASAJEROS                ║");
+    print("╠═══════════════════════════════════════════╣");
+    print("║  1. ▶  Consultar datos del pasajero       ║");
+    print("║  2. ▶  Modificar datos del pasajero       ║");
+    print("║  3. ▶  Eliminar pasajero                  ║");
+    print("║  4. ▶  Consultar boleto del pasajero      ║");
+    print("║  0. ▶  Regresar al menu principal         ║");
+    print("╚═══════════════════════════════════════════╝");
     
 #Menu TARIFAS
 def mTarifas():
-    print("\n")
-    print("|          Tarifas          |")
-    print("|  1) Consultar tarifas     |")
-    print("|  2) Agregar tarifa        |")
-    print("|  3) Modificar tarifa      |")
-    print("|  4) Eliminar tarifa       |")
-    print("|  0) Salir                 |")
+    print('\n')
+    print("╔═══════════════════════════════════════════╗");
+    print("║                   TARIFAS                 ║");
+    print("╠═══════════════════════════════════════════╣");
+    print("║  1. ▶  Consultar tarifas                  ║");
+    print("║  2. ▶  Agregar tarifa                     ║");
+    print("║  3. ▶  Modificar tarifa                   ║");
+    print("║  4. ▶  Eliminar tarifa                    ║");
+    print("║  0. ▶  Regresar al menu principal         ║");
+    print("╚═══════════════════════════════════════════╝"); 
