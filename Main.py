@@ -103,7 +103,7 @@ while opcion != 0:
                         
         case 6:
             while opcReservacion != 0:
-                opcReservacion = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 2, menu.mReservacion)
+                opcReservacion = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 4, menu.mReservacion)
                 match opcReservacion: 
                     case 0:
                         print("Saliendo")
@@ -111,9 +111,13 @@ while opcion != 0:
                         print("En contruccioin")
                     case 2:
                         print("En construccion")
+                    case 3:
+                        print("En construccion")
+                    case 4:
+                        print("En construccion")    
                     case _:
                         print("Opcion inválida. Vuelva a intentar.")
- 
+
         case 7:
             while opcPasajeros != 0:
                 opcPasajeros = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 4, menu.mPasajeros)
