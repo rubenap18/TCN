@@ -3,16 +3,20 @@
 #Menu PRINCIPAL
 def mPrincipal():
     print('\n')
-    print("|            TCN            |")
-    print("|  1) Rutas                 |")
-    print("|  2) Corridas              |")
-    print("|  3) Autobuses             |")
-    print("|  4) Asientos              |")
-    print("|  5) Boletos               |")
-    print("|  6) Reservaciones         |")
-    print("|  7) Pasajeros             |")
-    print("|  8) Tarifas               |")
-    print("|  0) Salir                 |")
+    print("╔═══════════════════════════════════════╗");
+    print("║       M E N U   P R I N C I P A L     ║");
+    print("╠═══════════════════════════════════════╣");
+    print("║  1. ▶  Rutas                          ║");
+    print("║  2. ▶  Corridas                       ║");
+    print("║  3. ▶  Autobuses                      ║");
+    print("║  4. ▶  Asientos                       ║");
+    print("║  5. ▶  Boletos                        ║");
+    print("║  6. ▶  Reservaciones                  ║");
+    print("║  7. ▶  Pasajeros                      ║");
+    print("║  8. ▶  Tarifas                        ║");
+    print("║  0. ▶  Salir del programa             ║");
+    print("╚═══════════════════════════════════════╝");
+
     
 def mRutas():
     print("\n")
@@ -53,21 +57,30 @@ def mAsientos():
     
 #Menu BOLETOS 
 def mBoletos():
-    print("\n")
-    print("|            BOLETOS              |")
-    print("|  1) Consultar boleto emitido    |")
-    print("|  2) Reimprimir boleto emitido   |")
-    print("|  3) Listar boletos emitidos     |")
-    print("|  0) Salir                       |")
+    print('\n')
+    print("╔═══════════════════════════════════════╗");
+    print("║                BOLETOS                ║");
+    print("╠═══════════════════════════════════════╣");
+    print("║  1. ▶  Consultar boleto emitido       ║");
+    print("║  2. ▶  Reimprimir boleto emitido      ║");
+    print("║  3. ▶  Listar boletos emitidos        ║");
+    print("║  0. ▶  Regresar al menu principal     ║");
+    print("╚═══════════════════════════════════════╝");
+
 
 #Menu RESERVACION
 def mReservacion():
-    print("\n")
-    print("|            RESERVACIONES                   |")
-    print("|  1) Listar reservaciones                   |")
-    print("|  2) Editar reservacion                     |")
-    print("|  0) Salir                                  |")
-    
+    print('\n')
+    print("╔═══════════════════════════════════════════╗");
+    print("║             RESERVACIONES                 ║");
+    print("╠═══════════════════════════════════════════╣");
+    print("║  1. ▶  Listar reservaciones activas       ║");
+    print("║  2. ▶  Listar reservaciones pasadas       ║");
+    print("║  3. ▶  Crear reservaciones (manualmente)  ║");
+    print("║  4. ▶  Editar reservaciones (manualmente) ║");
+    print("║  0. ▶  Regresar al menu principal         ║");
+    print("╚═══════════════════════════════════════════╝");
+
 #Menu PASAJEROS
 def mPasajeros():
     print("\n")
