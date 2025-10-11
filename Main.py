@@ -197,56 +197,62 @@ while opcion != 0:
                         print("║                REGRESANDO...              ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 1:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Aqui podras consultar datos importantes sobre el pasajero como nombre compreto ║")
+                        print("║ fecha de nacimiento y contacto                                                 ║")
+                        print("╚════════════════════════════════════════════════════════════════════════════════╝")
                     case 2:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Esta opcion permite registrar a un pasajero  manualmente y asi ayudandole para  ║")
+                        print("║ generar su boleto                                                               ║")
+                        print("╚═════════════════════════════════════════════════════════════════════════════════╝")
                     case 3:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═════════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Aquí puedes modificar los datos del pasajero cuando sea necesario                   ║")
+                        print("╚═════════════════════════════════════════════════════════════════════════════════════╝")
                     case 4:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Esta opcion permite  eliminar los pasajaros, ten en cuenta que todos los datos ║")
+                        print("║ seran eliminados                                                               ║")
+                        print("╚════════════════════════════════════════════════════════════════════════════════╝")
                     case _:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═══════════════════════════════════════════╗")
+                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║")
+                        print("╚═══════════════════════════════════════════╝")
                         
         case 8:
             while opcTarifa != 0:
                 opcTarifa = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0 , 4, menu.mTarifas)
                 match opcTarifa: 
                     case 0:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║                REGRESANDO...              ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═══════════════════════════════════════════╗")
+                        print("║                REGRESANDO...              ║")
+                        print("╚═══════════════════════════════════════════╝")
                     case 1:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Aqui podras consultar las difrentes tarifas viegentes tanto de los pasajeros   ║")
+                        print("║ como el precio de diferetes rutas con sus repectivos tipo de autobus           ║")
+                        print("╚════════════════════════════════════════════════════════════════════════════════╝")
                     case 2:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═══════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Aqui podras agregar una nueva tarifa a los pasajeros o colocar precio a un ruta   ║")
+                        print("╚═══════════════════════════════════════════════════════════════════════════════════╝")
                     case 3:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═════════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Aquí puedes modificar los datos de la tarifa cuando sea necesario                   ║")
+                        print("╚═════════════════════════════════════════════════════════════════════════════════════╝")
                     case 4:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔════════════════════════════════════════════════════════════════════════════════╗")
+                        print("║ Esta opcion permite  eliminar las tarifas, ten en cuenta que todos los datos ║")
+                        print("║ seran eliminados                                                               ║")
+                        print("╚════════════════════════════════════════════════════════════════════════════════╝")
                     case _:
-                        print("╔═══════════════════════════════════════════╗");
-                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║");
-                        print("╚═══════════════════════════════════════════╝");
+                        print("╔═══════════════════════════════════════════╗")
+                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║")
+                        print("╚═══════════════════════════════════════════╝")
                         
         case _:
             print("╔═══════════════════════════════════════════╗");
             print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║");
+
             print("╚═══════════════════════════════════════════╝");
