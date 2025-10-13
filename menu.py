@@ -24,7 +24,7 @@ def mRutas():
     print("║                    RUTAS                  ║");
     print("╠═══════════════════════════════════════════╣");
     print("║  1. ▶  Consultar rutas                    ║");
-    print("║  2. ▶  Modificar ruta                     ║");
+    print("║  2. ▶  Nueva ruta                         ║");
     print("║  3. ▶  Consultar escalas                  ║");
     print("║  4. ▶  Modificar escalas                  ║");
     print("║  5. ▶  Eliminar rutas                     ║");
@@ -116,4 +116,5 @@ def mTarifas():
     print("║  3. ▶  Modificar tarifa                   ║");
     print("║  4. ▶  Eliminar tarifa                    ║");
     print("║  0. ▶  Regresar al menu principal         ║");
+
     print("╚═══════════════════════════════════════════╝"); 
