@@ -13,8 +13,8 @@ def vOpciones(msg, inf, sup,funcion):
             
             else:
 
-                print("╔════════════════════════════════════╗");
-                print("║        OPCION FUERA DE RANGO       ║");
-                print("╚════════════════════════════════════╝");
+                print("╔════════════════════════════════════╗")
+                print("║        OPCION FUERA DE RANGO       ║")
+                print("╚════════════════════════════════════╝")
                 
     return valor #returnando VALOR como tipo int
