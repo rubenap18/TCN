@@ -32,23 +32,29 @@ while opcion != 0:
                         print("╚═══════════════════════════════════════════╝");
                     case 1:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se podrá revisar o consultar las rutas║");
+                        print("║ disponibles (solo incluirá origen y       ║");
+                        print("║ destino)                                  ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 2:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se podrá agregar una ruta nueva       ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 3:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se va a poder consultar o ver las     ║");
+                        print("║escalas de cada ruta por medio del número  ║");
+                        print("║o clave de ruta                            ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 4:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se van a poder cambiar las escalas de ║");
+                        print("║una ruta                                   ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 5:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se va a poder borrar las rutas antes  ║");
+                        print("║establecidas                               ║");
                         print("╚═══════════════════════════════════════════╝");
                     case _:
                         print("╔═══════════════════════════════════════════╗");
@@ -65,15 +71,18 @@ while opcion != 0:
                         print("╚═══════════════════════════════════════════╝");
                     case 1:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se van a poder ver o consultar todas  ║");
+                        print("║las corridas establecidas                  ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 2:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se va a poder agregar una nueva       ║");
+                        print("║corrida                                    ║");
                         print("╚═══════════════════════════════════════════╝");
                     case 3:
                         print("╔═══════════════════════════════════════════╗");
-                        print("║              EN CONSTRUCCION...           ║");
+                        print("║Aquí se va a poder eliminar corridas       ║");
+                        print("║ya existentes                              ║");
                         print("╚═══════════════════════════════════════════╝");
                     case _:
                         print("╔═══════════════════════════════════════════╗");
@@ -256,3 +265,4 @@ while opcion != 0:
             print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║");
 
             print("╚═══════════════════════════════════════════╝");
+
