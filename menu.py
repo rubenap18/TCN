@@ -69,14 +69,14 @@ def mAsientos():
 #Menu BOLETOS 
 def mBoletos():
     print('\n')
-    print("╔═══════════════════════════════════════╗")
-    print("║                BOLETOS                ║")
-    print("╠═══════════════════════════════════════╣")
-    print("║  1. ▶  Consultar boleto emitido       ║")
-    print("║  2. ▶  Reimprimir boleto emitido      ║")
-    print("║  3. ▶  Listar boletos emitidos        ║")
-    print("║  0. ▶  Regresar al menu principal     ║")
-    print("╚═══════════════════════════════════════╝")
+    print("╔═════════════════════════════════════════╗")
+    print("║                BOLETOS                  ║")
+    print("╠═════════════════════════════════════════╣")
+    print("║  1. ▶  Consultar boleto                 ║")
+    print("║  2. ▶  Modificar informacion de boleto  ║")
+    print("║  3. ▶  Reimprimir boleto                ║")
+    print("║  0. ▶  Regresar al menu principal       ║")
+    print("╚═════════════════════════════════════════╝")
 
 
 #Menu RESERVACION
@@ -85,10 +85,10 @@ def mReservacion():
     print("╔═══════════════════════════════════════════╗")
     print("║               RESERVACIONES               ║")
     print("╠═══════════════════════════════════════════╣")
-    print("║  1. ▶  Listar reservaciones activas       ║")
-    print("║  2. ▶  Listar reservaciones pasadas       ║")
-    print("║  3. ▶  Crear reservaciones (manualmente)  ║")
-    print("║  4. ▶  Editar reservaciones (manualmente) ║")
+    print("║  1. ▶  Mostrar reservaciones activas      ║")
+    print("║  2. ▶  Mostrar reservaciones pasadas      ║")
+    print("║  3. ▶  Reservar (manualmente)             ║")
+    print("║  4. ▶  Ajustar reservacion (manualmente)  ║")
     print("║  0. ▶  Regresar al menu principal         ║")
     print("╚═══════════════════════════════════════════╝")
 
