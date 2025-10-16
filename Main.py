@@ -1,6 +1,7 @@
 import logo
 import menu
 import val
+import corridas
 #While que inicia todo
 
 opcion = -1
@@ -11,6 +12,7 @@ opcRutas = - 1
 opcAutobuses = -1
 
 logo.logo()
+
 
 while opcion != 0:
   opcion = val.vOpciones(" ▶  ELIGE UNA OPCION: ",0 , 5, menu.mPrincipal)
@@ -28,22 +30,28 @@ while opcion != 0:
     case 3:
       while opcCorridas != 0:
         opcCorridas = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5 , menu.mCorridas) #Llamando al MENU Corridas y tarifas
-        while opcCorridas != 0:
-            match opcCorridas:
+        match opcCorridas:
                 case 0:
                     print("╔═══════════════════════════════════════════╗")
                     print("║                REGRESANDO...              ║")
                     print("╚═══════════════════════════════════════════╝")
+                    
                 case 1:
-                    print("Consultar tarifas")
+                    corridas.consultCorridas()
+                    
                 case 2:
-                    print("Consultar tarifas")    
-                case 3:   
-                    print("Consultar tarifas")
+                    corridas.consultPasajeros()  
+                    
                 case 4:
-                    print("Consultar tarifas")
+                    corridas.agregarCorrida()
+                    
                 case 5:
-                    print("Consultar tarifas")
+                    corridas.elimCorrida()
+                    
+                case _:
+                        print("╔═══════════════════════════════════════════╗")
+                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║")
+                        print("╚═══════════════════════════════════════════╝")
                                                        
     case 4:
         while opcRutas != 0:
