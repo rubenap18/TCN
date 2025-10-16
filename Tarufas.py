@@ -46,7 +46,7 @@ def ETarifa():
     nueva_desc = input("▶ Ingresa nueva descripción de la tarifa: ").strip().capitalize()
 
     print("\n╔══════════════════════════════════════════════════════════════════════════╗")
-    print("║           ✅  Tarifa modificada exitosamente                             ║")
+    print("║               Tarifa modificada exitosamente                             ║")
     print("╠══════════════════════════════════════════════════════════════════════════╣")
     print(f"║  Nueva tarifa: {nuevo_nombre:<15} │ Descripción: {nueva_desc:<30}║")
     print("╚══════════════════════════════════════════════════════════════════════════╝")
