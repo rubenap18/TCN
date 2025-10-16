@@ -123,13 +123,13 @@ def ARuta():
     destino = input("Ingrese destino: ").strip().capitalize()
     autobus = input("Tipo de autobús (PLUS / PLATINO / etc.): ").strip().upper()
 
-    print("\n╔══════════════════════════════════════════════════╗")
-    print("║              Ruta agregada exitosamente           ║")
-    print("╠══════════════════════════════════════════════════╣")
-    print("║  ORIGEN     │ DESTINO   │ HORA      │ AUTOBÚS     ║")
-    print("╟─────────────┼───────────┼───────────┼──────────────╢")
-    print(f"║  {origen:<10} │ {destino:<9} │ {hora:<9} │ {autobus:<10} ║")
-    print("╚══════════════════════════════════════════════════╝")
+    print("\n╔══════════════════════════════════════╗")
+    print("║       Ruta agregada exitosamente       ║")
+    print("╠════════════════════════════════════════╣")
+    print("║  ORIGEN     │ DESTINO   │ AUTOBÚS      ║")
+    print("╟─────────────┼───────────┼──────────────╢")
+    print(f"║  {origen:<10} │ {destino:<9} │ {autobus:<10} ║")
+    print("╚════════════════════════════════════════╝")
 
 
 
@@ -150,4 +150,3 @@ def Eruta():
     opcel = int(input("Seleccione una ruta para eliminar (1-5): "))
 
     print(f"\nLa ruta número {opcel} ha sido eliminada exitosamente ")
-
