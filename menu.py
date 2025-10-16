@@ -49,8 +49,8 @@ def mAutobuses():
     print("║  1. ▶  Gestor de asientos                 ║")
     print("║  2. ▶  Consultar autobuses disponibles    ║")
     print("║  3. ▶  Asignar autobús a corrida          ║")
-    print("║  4. ▶  Agregar nuevo autobús              ║")
-    print("║  5. ▶  Eliminar autobús                   ║")
+    print("║  4. ▶  Registrar nuevo autobús            ║")
+    print("║  5. ▶  Dar de baja un autobús             ║")
     print("║  0. ▶  Regresar al menu principal         ║")
     print("╚═══════════════════════════════════════════╝") 
     
