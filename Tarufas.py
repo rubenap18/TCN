@@ -24,7 +24,7 @@ def ATarifa():
     descripcion = input("▶ Ingresa nueva descripción de la tarifa: ").strip().capitalize()
     
     print("\n╔══════════════════════════════════════════════════════════════════════════╗")
-    print("║           ✅  Tarifa agregada exitosamente                               ║")
+    print("║               Tarifa agregada exitosamente                               ║")
     print("╠══════════════════════════════════════════════════════════════════════════╣")
     print(f"║  Nombre: {nombre:<15} │ Descripción: {descripcion:<30}║")
     print("╚══════════════════════════════════════════════════════════════════════════╝")
