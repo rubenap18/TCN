@@ -1,7 +1,29 @@
 def consultCorridas():
-    print("╔═══════════════════════════════════════╗")
-    print("║Aqui se van a mostrar las corridas     ║")
-    print("╚═══════════════════════════════════════╝")
+    origenes = ["Tijuana", "Tecate", "Ensenada", "Mexicali", "Rosarito", "San Quintin", "San Felipe"]
+    print("╔══════════════════════════════════════════╗")
+    print("║Ingresa origen de las corridas a consultar║")
+    print("╠══════════════════════════════════════════╣")
+    print("║1. Tijuana                                ║")
+    print("║2. Ensenada                               ║")
+    print("║3. Rosarito                               ║")
+    print("║4. Mexicali                               ║")
+    print("║5. Tecate                                 ║")
+    print("║6. San Felipe                             ║")
+    print("║7. San Quintin                            ║")
+    print("╚══════════════════════════════════════════╝")
+    origen = int(input())
+    if origen in origenes:
+        match origen:
+            case 1:
+                print("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
+                print(F"║                                       CORRIDAS DESDE TIJUANA                                                         ║")
+                print("╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣")
+                print("║  ORIGEN     │ DESTINO   │ AUTOBÚS   │  Salida     │  LLegada    │ Fecha de salida   │ Fecha de llegada  │ No. corrida ║")
+                print("╟─────────────┼───────────┼───────────┼─────────────┼─────────────┼───────────────────┼───────────────────┼─────────────╢")
+                print("║  Tijuana    │ Mexicali  │ PLUS      │  07:00      │  9:00       │ 15/10/2025        │ 15/10/2025        │ 123456      ║")
+                print("║  Tijuana    │ Ensenada  │ PLATINO   │  15:00      │  17:00      │ 15/10/2025        │ 15/10/2025        │ 654321      ║")
+                print("║  Tijuana    │ Rosarito  │ PLUS      │  14:00      │  16:00      │ 15/10/2025        │ 15/10/2025        │ 612543      ║")
+                print("╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
 
 def consultPasajeros():
     print("╔═══════════════════════════════════════╗")
@@ -43,4 +65,5 @@ def elimCorrida():
     print(f"Corrida {numCorrida} eliminada")
     
     
+
     
