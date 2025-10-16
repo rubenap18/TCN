@@ -129,26 +129,26 @@ def ARuta():
     print("\n╔══════════════════════════════════════════════════╗")
     print("║              Ruta agregada exitosamente           ║")
     print("╠══════════════════════════════════════════════════╣")
-    print("║  ORIGEN     │ DESTINO   │ HORA      │ AUTOBÚS     ║")
-    print("╟─────────────┼───────────┼───────────┼──────────────╢")
-    print(f"║  {origen:<10} │ {destino:<9} │ {hora:<9} │ {autobus:<10} ║")
+    print("║  ORIGEN     │ DESTINO   │ AUTOBÚS     ║")
+    print("╟─────────────┼───────────┼──────────────╢")
+    print(f"║  {origen:<10} │ {destino:<9} │ {autobus:<10} ║")
     print("╚══════════════════════════════════════════════════╝")
 
 
 
 
 def Eruta():
-    print("\n╔════════════════════════════════════════════════════════════╗")
-    print("║                M Ó D U L O   E L I M I N A R   R U T A      ║")
-    print("╠════════════════════════════════════════════════════════════╣")
-    print("║  N° │ ORIGEN     │ DESTINO    │   HORA   │   AUTOBÚS       ║")
-    print("╠═════╪════════════╪════════════╪══════════╪═════════════════╣")
-    print("║  1  │ TECATE     │ MEXICALI   │  9:00am  │ PLUS            ║")
-    print("║  2  │ TECATE     │ ENSENADA   │ 12:00pm  │ PLATINO         ║")
-    print("║  3  │ TECATE     │ TIJUANA    │  3:00pm  │ PLUS            ║")
-    print("║  4  │ TIJUANA    │ TECATE     │  3:00pm  │ PLUS            ║")
-    print("║  5  │ TIJUANA    │ MEXICALI   │  9:00am  │ PLUS            ║")
-    print("╚═════╧════════════╧════════════╧══════════╧═════════════════╝")
+    print("\n╔═══════════════════════════════════════════════╗")
+    print("║      M Ó D U L O   E L I M I N A R   R U T A    ║")
+    print("╠═════════════════════════════════════════════════╣")
+    print("║  N° │ ORIGEN     │ DESTINO    │   AUTOBÚS       ║")
+    print("╠═════╪════════════╪════════════╪══════════╪══════╣")
+    print("║  1  │ TECATE     │ MEXICALI   │ PLUS            ║")
+    print("║  2  │ TECATE     │ ENSENADA   │ PLATINO         ║")
+    print("║  3  │ TECATE     │ TIJUANA    │ PLUS            ║")
+    print("║  4  │ TIJUANA    │ TECATE     │ PLUS            ║")
+    print("║  5  │ TIJUANA    │ MEXICALI   │ PLUS            ║")
+    print("╚═════╧════════════╧════════════╧══════════╧══════╝")
 
     opcel = int(input("Seleccione una ruta para eliminar (1-5): "))
 
