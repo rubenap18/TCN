@@ -12,7 +12,7 @@ def CRutas():
         print("╠══════════════════════════════════════════════════╣")
         print("║  1. ▶  Buscar ruta por destino                   ║")
         print("║  2. ▶  Buscar ruta por origen                    ║")
-        print("║  3. ▶  Mostrar todas las rutas (simulada)        ║")
+        print("║  3. ▶  Mostrar todas las rutas                   ║")
         print("║  0. ▶  Salir                                     ║")
         print("╚══════════════════════════════════════════════════╝")
         opcion = int(input("Elige una opción ▶ "))
