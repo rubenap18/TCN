@@ -37,10 +37,10 @@ def CRutas():
                         print("║                  R U T A S   H A C I A   T I J U A N A                                     ║")
                         print("╠════════════════════════════════════════════════════════════════════════════════════════════╣")
                         print("║  ORIGEN     │ DESTINO   │ AUTOBÚS   │  DISTANCIA  │ PRECIO  │ TARIFAS ESPECIALES           ║")
-                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼──────────────────────────────╢")
-                        print("║  MEXICALI   │ TIJUANA   │ PLUS      │  170 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  ENSENADA   │ TIJUANA   │ PLATINO   │  110 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TECATE     │ TIJUANA   │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100║")
+                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼───────────────────────────────╢")
+                        print("║  MEXICALI   │ TIJUANA   │ PLUS      │  170 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  ENSENADA   │ TIJUANA   │ PLATINO   │  110 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TECATE     │ TIJUANA   │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
                         print("╚════════════════════════════════════════════════════════════════════════════════════════════╝")
 
                     case 2:
@@ -48,10 +48,10 @@ def CRutas():
                         print("║                  R U T A S   H A C I A   T E C A T E                                       ║")
                         print("╠════════════════════════════════════════════════════════════════════════════════════════════╣")
                         print("║  ORIGEN     │ DESTINO   │ AUTOBÚS   │  DISTANCIA  │ PRECIO  │ TARIFAS ESPECIALES           ║")
-                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼──────────────────────────────╢")
-                        print("║  MEXICALI   │ TECATE    │ PLUS      │  140 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  ENSENADA   │ TECATE    │ PLATINO   │  130 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TIJUANA    │ TECATE    │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100║")
+                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼───────────────────────────────╢")
+                        print("║  MEXICALI   │ TECATE    │ PLUS      │  140 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  ENSENADA   │ TECATE    │ PLATINO   │  130 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TIJUANA    │ TECATE    │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
                         print("╚════════════════════════════════════════════════════════════════════════════════════════════╝")
                     
                     case 3:
@@ -59,12 +59,12 @@ def CRutas():
                         print("║                      T O D A S   L A S   R U T A S   (Simulada)                            ║")
                         print("╠════════════════════════════════════════════════════════════════════════════════════════════╣")
                         print("║  ORIGEN     │ DESTINO   │ AUTOBÚS   │  DISTANCIA  │ PRECIO  │ TARIFAS ESPECIALES           ║")
-                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼──────────────────────────────╢")
-                        print("║  TECATE     │ MEXICALI  │ PLUS      │  140 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TECATE     │ ENSENADA  │ PLATINO   │  130 km     │  $300  │ Estudiante $150 / Adulto $150║")
-                        print("║  TECATE     │ TIJUANA   │ PLATINO   │   45 km     │  $400  │ Estudiante $200 / Adulto $200║")
-                        print("║  TIJUANA    │ TECATE    │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TIJUANA    │ MEXICALI  │ PLUS      │  170 km     │  $300  │ Estudiante $150 / Adulto $150║")
+                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼───────────────────────────────╢")
+                        print("║  TECATE     │ MEXICALI  │ PLUS      │  140 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TECATE     │ ENSENADA  │ PLATINO   │  130 km     │  $300  │ Estudiante $150 / Adulto $150 ║")
+                        print("║  TECATE     │ TIJUANA   │ PLATINO   │   45 km     │  $400  │ Estudiante $200 / Adulto $200 ║")
+                        print("║  TIJUANA    │ TECATE    │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TIJUANA    │ MEXICALI  │ PLUS      │  170 km     │  $300  │ Estudiante $150 / Adulto $150 ║")
                         print("╚════════════════════════════════════════════════════════════════════════════════════════════╝")
                     
                     case _:
@@ -87,10 +87,10 @@ def CRutas():
                         print("║                R U T A S   D E S D E   T I J U A N A                                       ║")
                         print("╠════════════════════════════════════════════════════════════════════════════════════════════╣")
                         print("║  ORIGEN     │ DESTINO   │ AUTOBÚS   │  DISTANCIA  │ PRECIO  │ TARIFAS ESPECIALES           ║")
-                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼──────────────────────────────╢")
-                        print("║  TIJUANA    │ MEXICALI  │ PLUS      │  170 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TIJUANA    │ ENSENADA  │ PLATINO   │  110 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TIJUANA    │ TECATE    │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100║")
+                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼───────────────────────────────╢")
+                        print("║  TIJUANA    │ MEXICALI  │ PLUS      │  170 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TIJUANA    │ ENSENADA  │ PLATINO   │  110 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TIJUANA    │ TECATE    │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
                         print("╚════════════════════════════════════════════════════════════════════════════════════════════╝")
 
                     case 2:
@@ -98,10 +98,10 @@ def CRutas():
                         print("║                R U T A S   D E S D E   T E C A T E                                         ║")
                         print("╠════════════════════════════════════════════════════════════════════════════════════════════╣")
                         print("║  ORIGEN     │ DESTINO   │ AUTOBÚS   │  DISTANCIA  │ PRECIO  │ TARIFAS ESPECIALES           ║")
-                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼──────────────────────────────╢")
-                        print("║  TECATE     │ MEXICALI  │ PLUS      │  140 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TECATE     │ ENSENADA  │ PLATINO   │  130 km     │  $200  │ Estudiante $100 / Adulto $100║")
-                        print("║  TECATE     │ TIJUANA   │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100║")
+                        print("╟─────────────┼───────────┼───────────┼─────────────┼────────┼───────────────────────────────╢")
+                        print("║  TECATE     │ MEXICALI  │ PLUS      │  140 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TECATE     │ ENSENADA  │ PLATINO   │  130 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
+                        print("║  TECATE     │ TIJUANA   │ PLUS      │   45 km     │  $200  │ Estudiante $100 / Adulto $100 ║")
                         print("╚════════════════════════════════════════════════════════════════════════════════════════════╝")
 
             case _:
