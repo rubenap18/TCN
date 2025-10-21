@@ -104,7 +104,7 @@ while opcion != 0:
                 print("╔═══════════════════════════════════════════╗")
                 print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║")
                 print("╚═══════════════════════════════════════════╝")
-                                                       
+                                                           
     case 4:
       while opcRutas != 0:
             opcRutas = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menu.mRutas) #Llamando al MENU Corridas y tarifas
