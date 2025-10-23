@@ -1,6 +1,6 @@
 #Este modulo fue creada por Ruben Aguilar
 #Este modulo contiene las funciones del menu Boleto
-import validaciones.val
+import val
 
 def comprarBoleto():
     origen = input('▶ Ingresa el origen: ')

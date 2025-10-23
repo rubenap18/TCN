@@ -1,17 +1,13 @@
-import menus
-import validaciones
-import con
-
-from menus import logo 
-from menus import menu
-from validaciones import val
-from menus import autobus 
-from menus import asientos 
-from menus import boleto 
-from menus import reservacion 
-from menus import corridas 
-from menus import rutas 
-from menus import tarifas 
+import logo 
+import menu
+import val
+import autobus 
+import asientos 
+import boleto 
+import reservacion 
+import corridas 
+import rutas 
+import tarifas 
 
 opcion = -1
 opcBoletos = -1
