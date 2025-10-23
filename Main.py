@@ -1,28 +1,31 @@
-import menus.logo
-import menus.menu
-import validaciones.val
-from menus.autobus import autobus
-from menus.asientos import asientos
-from menus.boleto import boleto
-from menus.reservacion import reservacion
-from menus.corridas import corridas
-from menus.rutas import rutas
-from menus.tarifas import tarifas
+import menus
+import validaciones
+import con
 
+from menus import logo 
+from menus import menu
+from validaciones import val
+from menus import autobus 
+from menus import asientos 
+from menus import boleto 
+from menus import reservacion 
+from menus import corridas 
+from menus import rutas 
+from menus import tarifas 
 
 opcion = -1
 opcBoletos = -1
 opcReservaciones = -1
 opcCorridas = -1
-opcRutas = -1
+opcRutas = - 1
 opcTarifas = -1
 opcAutobuses = -1
 opcAsientos = -1
 
-menus.logo()
+logo.mostrarLogo()
 
 while opcion != 0:
-    opcion = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5, menus.menu.mPrincipal)
+    opcion = val.vOpciones(" ▶  ELIGE UNA OPCION: ",0 , 5, menu.mPrincipal)
     match opcion:
         case 0:
             print("╔═══════════════════════════════════════════╗")
@@ -31,7 +34,7 @@ while opcion != 0:
 
         case 1:
             while opcBoletos != 0:
-                opcBoletos = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 4, menus.menu.mBoletos)  # Llamando al menus.menu Boletos
+                opcBoletos = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 4 , menu.mBoletos) #Llamando al MENU Corridas y tarifas
                 match opcBoletos:
                     case 0:
                         print("╔═══════════════════════════════════════════╗")
@@ -42,7 +45,7 @@ while opcion != 0:
                     case 2:
                         boleto.localizarBoleto()
                         boleto.menuOpcionesBoleto()
-                    case 3:
+                    case 3:   
                         boleto.localizarBoleto()
                         boleto.modificarDatosBoleto()
                     case 4:
@@ -56,7 +59,7 @@ while opcion != 0:
 
         case 2:
             while opcReservaciones != 0:
-                opcReservaciones = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menus.menu.mReservacion)  # Llamando al MENU Reservacion
+                opcReservaciones = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3 , menu.mReservacion) #Llamando al MENU Corridas y tarifas
                 match opcReservaciones:
                     case 0:
                         print("╔═══════════════════════════════════════════╗")
@@ -66,48 +69,48 @@ while opcion != 0:
                         reservacion.verReservacionesActivas()
                     case 2:
                         reservacion.verReservacionesPasadas()
-                    case 3:
+                    case 3:   
                         reservacion.cancelarReservacion()
                     case _:
-                        reservacion.imprimirConMarco('Opcion invalidaciones.valida. Intente de nuevo.')
+                        reservacion.imprimirConMarco('Opcion invalida. Intente de nuevo.')
 
         case 3:
             while opcCorridas != 0:
-                opcCorridas = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5, menus.menu.mCorridas)  # Llamando al MENU Corridas
+                opcCorridas = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5 , menu.mCorridas) #Llamando al MENU Corridas y tarifas
                 match opcCorridas:
                     case 0:
                         print("╔═══════════════════════════════════════════╗")
                         print("║                REGRESANDO...              ║")
-                        print("╚═══════════════════════════════════════════╝")
+                        print("╚═══════════════════════════════════════════╝")       
                     case 1:
-                        corridas.consultCorridas()
+                        corridas.consultCorridas()       
                     case 2:
-                        corridas.consultPasajeros()
-                    case 3:
-                        menus.menu.mTarifas()
+                        corridas.consultPasajeros()  
+                    case 3:  
+                        menu.mTarifas() 
                         while opcTarifas != 0:
-                            opcTarifas = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 2, menus.menu.mTarifas)
+                            opcTarifas = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 2, menu.mTarifas) 
                             match opcTarifas:
                                 case 0:
                                     print("╔═══════════════════════════════════════════╗")
                                     print("║                REGRESANDO...              ║")
                                     print("╚═══════════════════════════════════════════╝")
                                 case 1:
-                                    tarifas.CTarifas()
+                                    tarifas.CTarifas() 
                                 case 2:
-                                    tarifas.mTarifa()
+                                    tarifas.mTarifa()        
                     case 4:
-                        corridas.agregarCorrida()
+                        corridas.agregarCorrida()      
                     case 5:
-                        corridas.elimCorrida()
+                        corridas.elimCorrida()     
                     case _:
                         print("╔═══════════════════════════════════════════╗")
-                        print("║     OPCION INvalidaciones.valIDA, INTENTA DE NUEVO     ║")
+                        print("║     OPCION INVALIDA, INTENTA DE NUEVO     ║")
                         print("╚═══════════════════════════════════════════╝")
 
         case 4:
             while opcRutas != 0:
-                opcRutas = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menus.menu.mRutas)  # Llamando al MENU Rutas
+                opcRutas = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menu.mRutas) #Llamando al MENU Corridas y tarifas
                 match opcRutas:
                     case 0:
                         print("╔═══════════════════════════════════════════╗")
@@ -115,15 +118,17 @@ while opcion != 0:
                         print("╚═══════════════════════════════════════════╝")
                     case 1:
                         rutas.CRutas()
+
                     case 2:
                         rutas.ARuta()
-                    case 3:
+
+                    case 3:   
                         rutas.Eruta()
 
         case 5:
-            opcAutobuses = -1
+            opcAutobuses = -1  
             while opcAutobuses != 0:
-                opcAutobuses = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5, menus.menu.mAutobuses)  # Llamando al MENU Autobuses
+                opcAutobuses = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 5, menu.mAutobuses) #Llamando al MENU Autobes
                 match opcAutobuses:
                     case 0:
                         print("╔═══════════════════════════════════════════╗")
@@ -132,7 +137,7 @@ while opcion != 0:
                     case 1:
                         opcAsientos = -1
                         while opcAsientos != 0:
-                            opcAsientos = validaciones.val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menus.menu.mAsientos)
+                            opcAsientos = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3, menu.mAsientos)
                             match opcAsientos:
                                 case 0:
                                     print("╔═══════════════════════════════════════════╗")
@@ -151,4 +156,4 @@ while opcion != 0:
                     case 4:
                         autobus.AgregarAutobus()
                     case 5:
-                        autobus.EliminarAutobus()
+                        autobus.EliminarAutobus()   

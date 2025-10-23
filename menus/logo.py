@@ -1,4 +1,4 @@
-def logo():
+def mostrarLogo():
     print(r"""
             _______________________________
             |    Transportes Cuervo Negro     |                   
