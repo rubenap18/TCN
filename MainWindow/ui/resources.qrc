@@ -1,0 +1,16 @@
+<RCC>
+  <qresource>
+    <file>../recursos/Icons/autobus.png</file>
+    <file>../recursos/Icons/avatar-de-usuario.png</file>
+    <file>../recursos/Icons/calendario.png</file>
+    <file>../recursos/Icons/conductor.png</file>
+    <file>../recursos/Icons/entrega.png</file>
+    <file>../recursos/Icons/frente-del-autobus.png</file>
+    <file>../recursos/Icons/la-carretera.png</file>
+    <file>../recursos/Icons/pasajero.png</file>
+    <file>../recursos/Icons/pdf.png</file>
+    <file>../recursos/Icons/sobresalir.png</file>
+    <file>../recursos/Icons/usuario.png</file>
+    <file>../recursos/Icons/WhatsApp Image 2025-11-18 at 11.26.59 AM.jpeg</file>
+  </qresource>
+</RCC>
