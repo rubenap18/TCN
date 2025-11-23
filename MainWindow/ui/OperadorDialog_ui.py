@@ -63,13 +63,13 @@ class Ui_Dialog(object):
         font1.setBold(True)
         font1.setItalic(True)
         self.label.setFont(font1)
-        self.pushButton = QPushButton(Dialog)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(230, 453, 171, 41))
+        self.addo_pushButton = QPushButton(Dialog)
+        self.addo_pushButton.setObjectName(u"addo_pushButton")
+        self.addo_pushButton.setGeometry(QRect(230, 460, 171, 41))
         font2 = QFont()
         font2.setBold(True)
-        self.pushButton.setFont(font2)
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
+        self.addo_pushButton.setFont(font2)
+        self.addo_pushButton.setStyleSheet(u"QPushButton{\n"
 "	background: #1061C4;\n"
 "	color:WHITE;\n"
 "	border:none;\n"
@@ -84,11 +84,11 @@ class Ui_Dialog(object):
 "QPushButton:pressed {\n"
 "    background-color: #0A3F8A;     \n"
 "}")
-        self.can_pushButton = QPushButton(Dialog)
-        self.can_pushButton.setObjectName(u"can_pushButton")
-        self.can_pushButton.setGeometry(QRect(120, 453, 91, 41))
-        self.can_pushButton.setFont(font2)
-        self.can_pushButton.setStyleSheet(u"QPushButton{\n"
+        self.cano_pushButton = QPushButton(Dialog)
+        self.cano_pushButton.setObjectName(u"cano_pushButton")
+        self.cano_pushButton.setGeometry(QRect(130, 460, 91, 41))
+        self.cano_pushButton.setFont(font2)
+        self.cano_pushButton.setStyleSheet(u"QPushButton{\n"
 "	background: #FF6A36;\n"
 "	color:WHITE;\n"
 "	border:none;\n"
@@ -103,13 +103,13 @@ class Ui_Dialog(object):
 "QPushButton:pressed {\n"
 "    background-color: #CC532A;   /* M\u00e1s oscuro para click */\n"
 "}")
-        self.widget = QWidget(Dialog)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(21, 81, 381, 66))
-        self.verticalLayout = QVBoxLayout(self.widget)
+        self.layoutWidget = QWidget(Dialog)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(21, 81, 381, 66))
+        self.verticalLayout = QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label_2 = QLabel(self.widget)
+        self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
         font3 = QFont()
         font3.setPointSize(12)
@@ -117,7 +117,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.label_2)
 
-        self.name_lineEdit = QLineEdit(self.widget)
+        self.name_lineEdit = QLineEdit(self.layoutWidget)
         self.name_lineEdit.setObjectName(u"name_lineEdit")
         self.name_lineEdit.setMinimumSize(QSize(0, 38))
         self.name_lineEdit.setMaximumSize(QSize(16777215, 24))
@@ -138,19 +138,19 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.name_lineEdit)
 
-        self.widget1 = QWidget(Dialog)
-        self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(20, 162, 381, 66))
-        self.verticalLayout_2 = QVBoxLayout(self.widget1)
+        self.layoutWidget1 = QWidget(Dialog)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(20, 162, 381, 66))
+        self.verticalLayout_2 = QVBoxLayout(self.layoutWidget1)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label_3 = QLabel(self.widget1)
+        self.label_3 = QLabel(self.layoutWidget1)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setFont(font3)
 
         self.verticalLayout_2.addWidget(self.label_3)
 
-        self.ap_lineEdit = QLineEdit(self.widget1)
+        self.ap_lineEdit = QLineEdit(self.layoutWidget1)
         self.ap_lineEdit.setObjectName(u"ap_lineEdit")
         self.ap_lineEdit.setMinimumSize(QSize(0, 38))
         self.ap_lineEdit.setMaximumSize(QSize(16777215, 24))
@@ -168,19 +168,19 @@ class Ui_Dialog(object):
 
         self.verticalLayout_2.addWidget(self.ap_lineEdit)
 
-        self.widget2 = QWidget(Dialog)
-        self.widget2.setObjectName(u"widget2")
-        self.widget2.setGeometry(QRect(20, 239, 381, 66))
-        self.verticalLayout_5 = QVBoxLayout(self.widget2)
+        self.layoutWidget2 = QWidget(Dialog)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(20, 239, 381, 66))
+        self.verticalLayout_5 = QVBoxLayout(self.layoutWidget2)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.label_5 = QLabel(self.widget2)
+        self.label_5 = QLabel(self.layoutWidget2)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setFont(font3)
 
         self.verticalLayout_5.addWidget(self.label_5)
 
-        self.am_lineEdit = QLineEdit(self.widget2)
+        self.am_lineEdit = QLineEdit(self.layoutWidget2)
         self.am_lineEdit.setObjectName(u"am_lineEdit")
         self.am_lineEdit.setMinimumSize(QSize(0, 38))
         self.am_lineEdit.setMaximumSize(QSize(16777215, 24))
@@ -233,12 +233,33 @@ class Ui_Dialog(object):
 "    color: #606266;\n"
 "    min-height: 18px;\n"
 "")
-        self.dateEdit.setMaximumDate(QDate(9997, 12, 31))
-        self.dateEdit.setCalendarPopup(False)
+        #self.dateEdit.setMaximumDate(QDate(9997, 12, 31))
+        #self.dateEdit.setCalendarPopup(False)
         self.label_6 = QLabel(Dialog)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(220, 320, 157, 20))
         self.label_6.setFont(font3)
+        self.label_7 = QLabel(Dialog)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(20, 390, 157, 20))
+        self.label_7.setFont(font3)
+        self.dateEdit_2 = QDateEdit(Dialog)
+        self.dateEdit_2.setObjectName(u"dateEdit_2")
+        self.dateEdit_2.setGeometry(QRect(20, 420, 111, 35))
+        self.dateEdit_2.setMinimumSize(QSize(0, 35))
+        self.dateEdit_2.setMaximumSize(QSize(16777215, 24))
+        self.dateEdit_2.setFont(font4)
+        self.dateEdit_2.setStyleSheet(u"\n"
+"    background-color: #ffffff;\n"
+"    border: 1px solid #dcdfe6;\n"
+"    border-radius: 6px;\n"
+"    padding: 6px 12px;\n"
+"    font-size: 13px;\n"
+"    color: #606266;\n"
+"    min-height: 18px;\n"
+"")
+        #self.dateEdit_2.setMaximumDate(QDate(9997, 12, 31))
+        #self.dateEdit_2.setCalendarPopup(False)
 
         self.retranslateUi(Dialog)
 
@@ -248,12 +269,13 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"A\u00f1adir un nuevo operador", None))
-        self.pushButton.setText(QCoreApplication.translate("Dialog", u"A\u00f1adir Operador", None))
-        self.can_pushButton.setText(QCoreApplication.translate("Dialog", u"Cancelar", None))
+        self.addo_pushButton.setText(QCoreApplication.translate("Dialog", u"A\u00f1adir Operador", None))
+        self.cano_pushButton.setText(QCoreApplication.translate("Dialog", u"Cancelar", None))
         self.label_2.setText(QCoreApplication.translate("Dialog", u"Nombre", None))
         self.label_3.setText(QCoreApplication.translate("Dialog", u"Apellido Parterno", None))
         self.label_5.setText(QCoreApplication.translate("Dialog", u"Apellido Materno", None))
         self.label_4.setText(QCoreApplication.translate("Dialog", u"Telefono", None))
         self.label_6.setText(QCoreApplication.translate("Dialog", u"Fecha de nacimiento", None))
+        self.label_7.setText(QCoreApplication.translate("Dialog", u"Fecha de contrato", None))
     # retranslateUi
 

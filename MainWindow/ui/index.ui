@@ -284,17 +284,17 @@ QPushButton:pressed {
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>1470</x>
+       <x>1460</x>
        <y>20</y>
-       <width>61</width>
-       <height>61</height>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="resources.qrc">:/recursos/Icons/usuario.png</pixmap>
+      <pixmap resource="resources.qrc">:/recursos/Icons/gente.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -307,7 +307,7 @@ QPushButton:pressed {
       <x>300</x>
       <y>150</y>
       <width>1561</width>
-      <height>901</height>
+      <height>881</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -316,92 +316,14 @@ border-radius: 15px;
 border-bottom: 1px solid #E3E3E3;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="main">
-     <widget class="QTableWidget" name="ventas_tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>60</y>
-        <width>751</width>
-        <height>361</height>
-       </rect>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-QTableWidget {
-    background-color: #ffffff;
-    border: 1px solid #dcdfe6;
-    border-radius: 15px;
-    gridline-color: #e0e0e0;
-    outline: none;
-    font-size: 13px;
-    color: #606266;
-}
-
-QTableWidget::item {
-    padding: 8px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-QTableWidget::item:selected {
-    background-color: #409eff;
-    color: white;
-}
-
-QTableWidget::item:hover {
-    background-color: #f5f7fa;
-}
-
-/* Header con bordes redondeados solo arriba */
-QHeaderView::section:first {
-    border-top-left-radius: 15px;
-}
-
-QHeaderView::section:last {
-    border-top-right-radius: 15px;
-}
-
-QHeaderView::section {
-    background-color: #1061C4;
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    padding: 8px 12px;
-    border: none;
-    border-right: 1px solid #0a4a9d;
-}
-
-QHeaderView::section:hover {
-    background-color: #0a4a9d;
-}
-
-QHeaderView::section:pressed {
-    background-color: #083a7a;
-}
-</string>
-      </property>
-      <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>800</number>
-      </attribute>
-      <column>
-       <property name="text">
-        <string>Ventas</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTableWidget" name="autobus_tableWidget">
+     <widget class="QTableWidget" name="corridasm_tableWidget">
       <property name="geometry">
        <rect>
         <x>110</x>
-        <y>500</y>
+        <y>30</y>
         <width>751</width>
         <height>361</height>
        </rect>
@@ -467,25 +389,134 @@ QHeaderView::section:pressed {
        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>750</number>
+       <number>187</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
       </attribute>
       <column>
        <property name="text">
-        <string>Autobuses Activos</string>
+        <string>N° Corrida</string>
        </property>
-       <property name="font">
-        <font>
-         <bold>true</bold>
-        </font>
+      </column>
+      <column>
+       <property name="text">
+        <string>Fecha</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Hora Salida</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Ruta</string>
        </property>
       </column>
      </widget>
-     <widget class="QTableWidget" name="corridas_tableWidget">
+     <widget class="QTableWidget" name="autobusm_tableWidget">
       <property name="geometry">
        <rect>
-        <x>1020</x>
-        <y>50</y>
-        <width>451</width>
+        <x>110</x>
+        <y>480</y>
+        <width>751</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 15px;
+    gridline-color: #e0e0e0;
+    outline: none;
+    font-size: 13px;
+    color: #606266;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+QTableWidget::item:selected {
+    background-color: #409eff;
+    color: white;
+}
+
+QTableWidget::item:hover {
+    background-color: #f5f7fa;
+}
+
+/* Header con bordes redondeados solo arriba */
+QHeaderView::section:first {
+    border-top-left-radius: 15px;
+}
+
+QHeaderView::section:last {
+    border-top-right-radius: 15px;
+}
+
+QHeaderView::section {
+    background-color: #1061C4;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 12px;
+    border: none;
+    border-right: 1px solid #0a4a9d;
+}
+
+QHeaderView::section:hover {
+    background-color: #0a4a9d;
+}
+
+QHeaderView::section:pressed {
+    background-color: #083a7a;
+}
+</string>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>187</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>N° Autobús</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Matricula</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Marca/Modelo</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tipo</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTableWidget" name="pasajerosm_tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>30</y>
+        <width>511</width>
         <height>811</height>
        </rect>
       </property>
@@ -550,11 +581,29 @@ QHeaderView::section:pressed {
        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>450</number>
+       <number>127</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
       </attribute>
       <column>
        <property name="text">
-        <string>Corridas Activas</string>
+        <string>N° Pasajero</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Nombre </string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Edad</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Telefono</string>
        </property>
       </column>
      </widget>
@@ -580,7 +629,7 @@ QHeaderView::section:pressed {
        <string>OPERADORES</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="o_tableWidget">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -644,6 +693,7 @@ QHeaderView::section:hover {
 QHeaderView::section:pressed {
     background-color: #083a7a;
 }
+
 </string>
       </property>
       <property name="horizontalScrollBarPolicy">
@@ -651,6 +701,9 @@ QHeaderView::section:pressed {
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>284</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
       </attribute>
       <column>
        <property name="text">
@@ -674,7 +727,7 @@ QHeaderView::section:pressed {
       </column>
       <column>
        <property name="text">
-        <string>Edad</string>
+        <string>Fecha de nacimiento</string>
        </property>
        <property name="font">
         <font>
@@ -883,17 +936,17 @@ QHeaderView::section:pressed {
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>211</width>
-      <height>121</height>
+      <x>40</x>
+      <y>40</y>
+      <width>241</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resources.qrc">:/recursos/Icons/WhatsApp Image 2025-11-18 at 11.26.59 AM.jpeg</pixmap>
+     <pixmap resource="resources.qrc">:/recursos/Icons/Screenshot from 2025-11-22 14-58-14.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -917,38 +970,66 @@ border-bottom: 1px solid #E3E3E3;</string>
      <number>1</number>
     </property>
     <widget class="QWidget" name="page_3">
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>40</y>
-        <width>161</width>
-        <height>51</height>
+        <x>10</x>
+        <y>350</y>
+        <width>191</width>
+        <height>26</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>-1</pointsize>
+        <pointsize>25</pointsize>
         <bold>true</bold>
        </font>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-	background: #FF6A36;
-	color:WHITE;
-	border:none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 20px;
-}</string>
+      <property name="text">
+       <string>Bienvenido</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>390</y>
+        <width>41</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
-       <string>Nueva venta</string>
+       <string>a</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>440</y>
+        <width>91</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>TCN</string>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page">
-     <widget class="QPushButton" name="addr_btn_2">
+     <widget class="QPushButton" name="addo_btn">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -1041,7 +1122,7 @@ QLineEdit:read-only {
        <string>Buscar operador...</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="dele_btn">
+     <widget class="QPushButton" name="edito_btn">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -1058,20 +1139,34 @@ QLineEdit:read-only {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton{
-	
-	background-color: rgb(237, 51, 59);
+	background: #FF6A36;
 	color:WHITE;
 	border:none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: #E85F30;   /* Naranja más oscuro */
+}
+
+QPushButton:pressed {
+    background-color: #CC532A;   /* Más oscuro para click */
 }</string>
       </property>
       <property name="text">
-       <string/>
+       <string>Editar operador</string>
       </property>
       <property name="icon">
-       <iconset theme="QIcon::ThemeIcon::EditDelete"/>
+       <iconset resource="resources.qrc">
+        <normaloff>:/recursos/Icons/entrega.png</normaloff>:/recursos/Icons/entrega.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
       </property>
      </widget>
     </widget>
@@ -1121,39 +1216,6 @@ QPushButton:pressed {
         <width>30</width>
         <height>30</height>
        </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_agregar_ruta_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>290</y>
-        <width>181</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-	
-	background-color: rgb(237, 51, 59);
-	color:WHITE;
-	border:none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px;
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset theme="QIcon::ThemeIcon::EditDelete"/>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget">
@@ -1222,6 +1284,11 @@ QComboBox QAbstractItemView {
 }
 </string>
          </property>
+         <item>
+          <property name="text">
+           <string>Todos</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>Tijuana</string>
@@ -1324,6 +1391,11 @@ QComboBox QAbstractItemView {
          </property>
          <item>
           <property name="text">
+           <string>Todos</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Tijuana</string>
           </property>
          </item>
@@ -1356,12 +1428,64 @@ QComboBox QAbstractItemView {
        </item>
       </layout>
      </widget>
+     <widget class="QPushButton" name="editr_bbtn">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>181</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background: #FF6A36;
+	color:WHITE;
+	border:none;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+QPushButton:hover {
+    background-color: #E85F30;   /* Naranja más oscuro */
+}
+
+QPushButton:pressed {
+    background-color: #CC532A;   /* Más oscuro para click */
+}</string>
+      </property>
+      <property name="text">
+       <string>Editar ruta</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/recursos/Icons/entrega.png</normaloff>:/recursos/Icons/entrega.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
     </widget>
    </widget>
+   <zorder>label</zorder>
+   <zorder>header_widget</zorder>
+   <zorder>main_stackedWidget</zorder>
+   <zorder>side_stackedWidget</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
+  <include location="resources.qrc"/>
   <include location="resources.qrc"/>
   <include location="resources.qrc"/>
  </resources>

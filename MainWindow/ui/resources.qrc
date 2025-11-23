@@ -1,5 +1,13 @@
 <RCC>
   <qresource>
+    <file>../recursos/Icons/gente.png</file>
+    <file>../recursos/Icons/eliminar.png</file>
+    <file>../recursos/Icons/Screenshot from 2025-11-22 14-58-14.png</file>
+    <file>../recursos/Icons/LOGOJPG.jpg</file>
+    <file>../recursos/Icons/icono.png</file>
+    <file>../recursos/Icons/LOGOPNG.png</file>
+    <file>../recursos/Icons/loguito1.png</file>
+    <file>../recursos/Icons/loguito2.png</file>
     <file>../recursos/Icons/autobus.png</file>
     <file>../recursos/Icons/avatar-de-usuario.png</file>
     <file>../recursos/Icons/calendario.png</file>
