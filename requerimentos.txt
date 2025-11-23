@@ -1,0 +1,3 @@
+Librerias necesarias:
+- mysql-connector-python
+- Pyside6
