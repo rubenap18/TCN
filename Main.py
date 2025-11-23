@@ -3,8 +3,8 @@ import menu
 import val
 import autobus 
 import asientos 
-import boleto 
-import reservacion 
+import fBoleto 
+import funciones_reservacion 
 import corridas 
 import rutas 
 import tarifas 
@@ -37,38 +37,40 @@ while opcion != 0:
                         print("║                REGRESANDO...              ║")
                         print("╚═══════════════════════════════════════════╝")
                     case 1:
-                        boleto.comprarBoleto()
+                        fBoleto.comprarBoleto()
                     case 2:
-                        boleto.localizarBoleto()
-                        boleto.menuOpcionesBoleto()
+                        fBoleto.localizarBoleto()
+                        fBoleto.menuOpcionesBoleto()
                     case 3:   
-                        boleto.localizarBoleto()
-                        boleto.modificarDatosBoleto()
+                        fBoleto.localizarBoleto()
+                        fBoleto.modificarDatosBoleto()
                     case 4:
-                        boleto.localizarBoleto()
+                        fBoleto.localizarBoleto()
                         opcion = int(input('▶ Confirma cancelacion: 1)Si 2)No'))
                         if opcion == 1:
-                            boleto.cancelarBoleto()
+                            fBoleto.cancelarBoleto()
                         else:
-                            boleto.imprimirConMarco("Cancelando accion")
-                            boleto.menuOpcionesBoleto()
+                            fBoleto.imprimirConMarco("Cancelando accion")
+                            fBoleto.menuOpcionesBoleto()
 
         case 2:
             while opcReservaciones != 0:
-                opcReservaciones = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 3 , menu.mReservacion) #Llamando al MENU Corridas y tarifas
+                opcReservaciones = val.vOpciones(" ▶  ELIGE UNA OPCION: ", 0, 4 , menu.mReservacion) #Llamando al MENU Corridas y tarifas
                 match opcReservaciones:
                     case 0:
                         print("╔═══════════════════════════════════════════╗")
                         print("║                REGRESANDO...              ║")
                         print("╚═══════════════════════════════════════════╝")
                     case 1:
-                        reservacion.verReservacionesActivas()
+                        funciones_reservacion.verReservacionesActivas()
                     case 2:
-                        reservacion.verReservacionesPasadas()
+                        funciones_reservacion.verReservacionesPasadas()
                     case 3:   
-                        reservacion.cancelarReservacion()
+                        funciones_reservacion.cancelarReservacion()
+                    case 4:
+                        pass
                     case _:
-                        reservacion.imprimirConMarco('Opcion invalida. Intente de nuevo.')
+                        funciones_reservacion.imprimirConMarco('Opcion invalida. Intente de nuevo.')
 
         case 3:
             while opcCorridas != 0:
