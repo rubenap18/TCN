@@ -164,8 +164,19 @@ class Database:
         return operadores
 
     def insertar_operador(self, nombre, apellPat, apellMat, fechaNac, telefono, fechaContrato):
-        comando = f"INSERT INTO operador (nombre, apellPat, apellMat, fechaNac, telefono, fechaContrato) VALUES ('{nombre}', '{apellPat}', '{apellMat}', '{fechaNac}', '{telefono}', '{fechaContrato}')"
-        return self.registrar(comando)
+        """Inserta un nuevo operador en la base de datos"""
+        try:
+            comando = f"INSERT INTO operador (nombre, apellPat, apellMat, fechaNac, telefono, fechaContrato) VALUES ('{nombre}', '{apellPat}', '{apellMat}', '{fechaNac}', '{telefono}', '{fechaContrato}')"
+            
+            print(f" DEBUG - SQL a ejecutar: {comando}")
+            resultado = self.registrar(comando)
+            print(f" DEBUG - Resultado registrar: {resultado}")
+            
+            return resultado
+            
+        except Exception as e:
+            print(f"❌ ERROR en insertar_operador: {e}")
+            return False
 
     def actualizar_operador_completo(self, numero, nombre, apellPat, apellMat, fechaNac, telefono, fechaContrato):
         comando = f"UPDATE operador SET nombre = '{nombre}', apellPat = '{apellPat}', apellMat = '{apellMat}', fechaNac = '{fechaNac}', telefono = '{telefono}', fechaContrato = '{fechaContrato}' WHERE numero = {numero}"
