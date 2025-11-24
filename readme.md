@@ -2,3 +2,12 @@
 
 # El modulo pricipal es *Main.py* ubicado en la raiz.
 # Se ha utilizado *venv* para la creacion del entorno virutal.
+
+**TCN - SISTEMA DE VENTAS DE BOLETOS DE AUTOBUS**
+===
+Desarrollado por:
+    - Aguilar Ruben
+    - Figueroa Hector
+    - Hernandez Juan
+    - Valdez Leonardo
+
