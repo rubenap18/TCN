@@ -18,6 +18,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
     QLineEdit, QMainWindow, QPushButton, QScrollArea,
     QSizePolicy, QStackedWidget, QStatusBar, QWidget,QTableWidget,QTableWidgetItem,QVBoxLayout,QHBoxLayout)
+from PySide6.QtWidgets import (
+    QWidget, QVBoxLayout, QTableView, QHeaderView
+)
+from PySide6.QtCore import QAbstractTableModel, QModelIndex, Qt
+from PySide6.QtGui import QColor, QFont, QBrush
+
+from objetos.reservacion import Reservacion
+# ...
 
 class Ui_MainWindow(object):
 
@@ -43,12 +51,12 @@ class Ui_MainWindow(object):
         self.widget_totoal_reservacion1.setObjectName(u"widget_totoal_reservacion1")
         self.widget_totoal_reservacion1.setGeometry(QRect(20, 20, 571, 131))
         self.widget_totoal_reservacion1.setStyleSheet(u"QWidget {\n"
-"	background: #fff;\n"
-"	border-radius: 10px;\n"
+"   background: #fff;\n"
+"   border-radius: 10px;\n"
 "    border: 1px solid #eee;\n"
 "}\n"
 "QWidget:hover {\n"
-"	border: 1px solid #aaa;\n"
+"   border: 1px solid #aaa;\n"
 "}")
         self.label = QLabel(self.widget_totoal_reservacion1)
         self.label.setObjectName(u"label")
@@ -76,21 +84,21 @@ class Ui_MainWindow(object):
         self.widget_2.setObjectName(u"widget_2")
         self.widget_2.setGeometry(QRect(630, 20, 621, 131))
         self.widget_2.setStyleSheet(u"QWidget {\n"
-"	background: #fff;\n"
-"	border-radius: 10px;\n"
+"   background: #fff;\n"
+"   border-radius: 10px;\n"
 "    border: 1px solid #eee;\n"
 "}\n"
 "QWidget:hover {\n"
-"	border: 1px solid #aaa;\n"
+"   border: 1px solid #aaa;\n"
 "}")
         self.label_10 = QLabel(self.widget_2)
         self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(40, 30, 171, 19))
+        self.label_10.setGeometry(QRect(40, 30, 300, 19))
         self.label_10.setFont(font)
         self.label_10.setStyleSheet(u"border: None; font-size: 17px; color: #444")
         self.label_11 = QLabel(self.widget_2)
         self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(40, 60, 41, 41))
+        self.label_11.setGeometry(QRect(40, 60, 70, 41))
         self.label_11.setFont(font)
         self.label_11.setStyleSheet(u"border: None; font-size: 35px; color: #000")
         self.label_12 = QLabel(self.widget_2)
@@ -106,21 +114,21 @@ class Ui_MainWindow(object):
         self.widget_3.setObjectName(u"widget_3")
         self.widget_3.setGeometry(QRect(1290, 20, 611, 131))
         self.widget_3.setStyleSheet(u"QWidget {\n"
-"	background: #fff;\n"
-"	border-radius: 10px;\n"
+"   background: #fff;\n"
+"   border-radius: 10px;\n"
 "    border: 1px solid #eee;\n"
 "}\n"
 "QWidget:hover {\n"
-"	border: 1px solid #aaa;\n"
+"   border: 1px solid #aaa;\n"
 "}")
         self.label_13 = QLabel(self.widget_3)
         self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(40, 30, 171, 19))
+        self.label_13.setGeometry(QRect(40, 30, 300, 19))
         self.label_13.setFont(font)
         self.label_13.setStyleSheet(u"border: None; font-size: 17px; color: #444")
         self.label_14 = QLabel(self.widget_3)
         self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(40, 60, 41, 41))
+        self.label_14.setGeometry(QRect(40, 60, 70, 41))
         self.label_14.setFont(font)
         self.label_14.setStyleSheet(u"border: None; font-size: 35px; color: #000")
         self.label_15 = QLabel(self.widget_3)
@@ -136,8 +144,8 @@ class Ui_MainWindow(object):
         self.widget_4.setObjectName(u"widget_4")
         self.widget_4.setGeometry(QRect(20, 170, 1880, 869))
         self.widget_4.setStyleSheet(u"QWidget {\n"
-"	background: #fff;\n"
-"	border-radius: 10px;\n"
+"   background: #fff;\n"
+"   border-radius: 10px;\n"
 "    border: 1px solid #eee;\n"
 "}\n"
 "")
@@ -149,6 +157,8 @@ class Ui_MainWindow(object):
         self.comboBox_filtros = QComboBox(self.widget_4)
         self.comboBox_filtros.setObjectName(u"comboBox_filtros")
         self.comboBox_filtros.setGeometry(QRect(1370, 90, 281, 41))
+        self.comboBox_filtros.addItem('Reservaciones Activas')
+        self.comboBox_filtros.addItem('Reservaciones Pasadas')
         self.comboBox_filtros.setStyleSheet(u"QComboBox {\n"
 "    background-color: white;\n"
 "    border: 1px solid #ccc;\n"
@@ -183,12 +193,12 @@ class Ui_MainWindow(object):
         font1.setBold(True)
         self.boton_mas_filtros.setFont(font1)
         self.boton_mas_filtros.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 15px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -202,17 +212,79 @@ class Ui_MainWindow(object):
         icon.addFile(u"recursos/icono_filtro.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.boton_mas_filtros.setIcon(icon)
         self.boton_mas_filtros.setIconSize(QSize(18, 18))
-        self.line_edit_buscar_corrida = QLineEdit(self.widget_4)
+        
+        # =========================================================================
+        # INICIO: CÓDIGO MODIFICADO PARA LA BARRA DE BÚSQUEDA Y BOTÓN
+        # =========================================================================
+
+        # 1. Contenedor (QWidget) que reemplaza la geometría del LineEdit
+        self.widget_contenedor_busqueda = QWidget(self.widget_4)
+        # Usa la geometría original del line_edit_buscar_corrida
+        self.widget_contenedor_busqueda.setGeometry(QRect(40, 90, 1311, 41))
+        self.widget_contenedor_busqueda.setObjectName(u"widget_contenedor_busqueda")
+        
+        # 2. Layout Horizontal (QHBoxLayout) dentro del contenedor
+        self.layout_busqueda = QHBoxLayout(self.widget_contenedor_busqueda)
+        self.layout_busqueda.setSpacing(0)
+        self.layout_busqueda.setContentsMargins(0, 0, 0, 0)
+        
+        # 3. QLineEdit de Búsqueda
+        self.line_edit_buscar_corrida = QLineEdit(self.widget_contenedor_busqueda)
         self.line_edit_buscar_corrida.setObjectName(u"line_edit_buscar_corrida")
-        self.line_edit_buscar_corrida.setGeometry(QRect(40, 90, 1311, 41))
-        self.line_edit_buscar_corrida.setStyleSheet(u"QLineEdit {\n"
-"padding-left:10px;\n"
-"}\n"
-"\n"
-"QLineEdit:hover {\n"
-"border: 1px solid #F6C392;\n"
-"}")
         self.line_edit_buscar_corrida.setMaxLength(100)
+        self.line_edit_buscar_corrida.setStyleSheet(u"""
+QLineEdit {
+    padding-left:10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: none; /* Quitamos el borde derecho */
+    height: 39px; /* Asegura la altura si el layout no lo hace por completo */
+}
+QLineEdit:hover {
+    border: 1px solid #F6C392;
+    border-right: none;
+}
+""")
+        # 4. QPushButton de Búsqueda
+        self.boton_buscar_corrida = QPushButton(self.widget_contenedor_busqueda)
+        self.boton_buscar_corrida.setObjectName(u"boton_buscar_corrida")
+        # El ancho es igual al alto para que sea cuadrado (41px para que coincida con la altura)
+        self.boton_buscar_corrida.setFixedSize(QSize(41, 41)) 
+        
+        icon_search = QIcon()
+        # Nota: Asegúrate de tener la imagen 'recursos/icono_search.png' disponible.
+        icon_search.addFile(u"recursos/icono_buscar_reservacion.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off) 
+        self.boton_buscar_corrida.setIcon(icon_search)
+        self.boton_buscar_corrida.setIconSize(QSize(20, 20))
+        
+        self.boton_buscar_corrida.setStyleSheet(u"""
+QPushButton {
+    background: #1061C4;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: WHITE;
+    font-weight: bold;
+    border: 1px solid #1061C4; /* Borde del mismo color */
+}
+QPushButton:hover {
+    background-color: #0D4FAB;
+}
+QPushButton:pressed {
+    background-color: #0A3F8A;
+}
+""")
+        
+        # 5. Añadir los Widgets al Layout
+        self.layout_busqueda.addWidget(self.line_edit_buscar_corrida) 
+        self.layout_busqueda.addWidget(self.boton_buscar_corrida) 
+        
+        # =========================================================================
+        # FIN: CÓDIGO MODIFICADO
+        # =========================================================================
+        
         self.line = QFrame(self.widget_4)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(-10, 160, 1920, 1))
@@ -224,12 +296,12 @@ class Ui_MainWindow(object):
         self.boton_crear_reservacion.setGeometry(QRect(1590, 30, 231, 41))
         self.boton_crear_reservacion.setFont(font1)
         self.boton_crear_reservacion.setStyleSheet(u"QPushButton{\n"
-"	background: #EE8C30;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px;\n"
+"   background: #EE8C30;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 15px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -271,6 +343,14 @@ class Ui_MainWindow(object):
         self.label_20.setFont(font)
         self.label_20.setStyleSheet(u"border: None; font-size: 14px; color: #444")
         self.label_20.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.label_cliente = QLabel(self.widget_5)
+        self.label_cliente.setText('CLIENTE')
+        self.label_cliente.setObjectName(u'label_cliente')
+        self.label_cliente.setGeometry(QRect(1100,20,91,19))
+        self.label_cliente.setFont(font)
+        self.label_cliente.setStyleSheet(u"border: None; font-size: 14px; color: #444")
+        self.label_cliente.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_26 = QLabel(self.widget_5)
         self.label_26.setObjectName(u"label_26")
         self.label_26.setGeometry(QRect(930, 20, 91, 19))
@@ -308,13 +388,16 @@ class Ui_MainWindow(object):
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
         self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1879, 479))
+        self.scrollAreaWidgetContents.setStyleSheet('background:#fff')
+        self.scrollAreaWidgetContents.setContentsMargins(0,0,0,0)
         self.scrollArea_reservaciones.setWidget(self.scrollAreaWidgetContents)
         # --- SECCIÓN DE RESERVACIONES DESLIZABLES usando(QScrollArea) --- #
         # Contenedor para los items de horario (dentro del QScrollArea)
         self.reservaciones_v_layout = QVBoxLayout(self.scrollAreaWidgetContents)
-        self.reservaciones_v_layout.setSpacing(20) # Espacio entre cada tarjeta de horario
+        self.reservaciones_v_layout.setSpacing(0) # Espacio entre cada tarjeta de horario
         self.reservaciones_v_layout.setAlignment(Qt.AlignmentFlag.AlignTop) # Alinear tarjetas arriba
         self.reservaciones_v_layout.addStretch(1) # Importante para que las tarjetas se agrupen arriba y el scroll funcione
+        self.reservaciones_v_layout.setContentsMargins(0, 0, 0, 0) # Quitar márgenes internos
         self.scrollArea_reservaciones.setStyleSheet("""
         QScrollArea {
             border:none;
@@ -354,12 +437,12 @@ class Ui_MainWindow(object):
         self.rutas_pushButton.setGeometry(QRect(30, 90, 161, 51))
         self.rutas_pushButton.setFont(font1)
         self.rutas_pushButton.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size:25px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size:25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -391,12 +474,12 @@ class Ui_MainWindow(object):
         self.corridas_pushButton.setGeometry(QRect(220, 90, 171, 51))
         self.corridas_pushButton.setFont(font1)
         self.corridas_pushButton.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 25px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -415,12 +498,12 @@ class Ui_MainWindow(object):
         self.operadores_pushButton.setGeometry(QRect(420, 90, 181, 51))
         self.operadores_pushButton.setFont(font1)
         self.operadores_pushButton.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 25px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -439,12 +522,12 @@ class Ui_MainWindow(object):
         self.autobuses_pushButton.setGeometry(QRect(630, 90, 181, 51))
         self.autobuses_pushButton.setFont(font1)
         self.autobuses_pushButton.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 25px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -463,12 +546,12 @@ class Ui_MainWindow(object):
         self.pasajeros_pushButton.setGeometry(QRect(840, 90, 181, 51))
         self.pasajeros_pushButton.setFont(font1)
         self.pasajeros_pushButton.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 25px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -487,12 +570,12 @@ class Ui_MainWindow(object):
         self.reservaciones_pushButton.setGeometry(QRect(1050, 90, 251, 51))
         self.reservaciones_pushButton.setFont(font1)
         self.reservaciones_pushButton.setStyleSheet(u"QPushButton{\n"
-"	background: #1061C4;\n"
-"	color:WHITE;\n"
-"	border:none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 25px;\n"
+"   background: #1061C4;\n"
+"   color:WHITE;\n"
+"   border:none;\n"
+"   border-radius: 8px;\n"
+"   font-weight: bold;\n"
+"   font-size: 25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -532,18 +615,11 @@ class Ui_MainWindow(object):
 
         self.stacked_principal.setCurrentIndex(0)
 
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-        agregar_reservaciones_tarjeta(self, self.reservaciones_v_layout, 's', 'dsf', 'ds', 'sd', 'ds', 'df')
-
 
         QMetaObject.connectSlotsByName(MainWindow)
+
+
+
     # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -560,9 +636,14 @@ class Ui_MainWindow(object):
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Reservaciones", None))
         self.comboBox_filtros.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Todos los estados", None))
         self.boton_mas_filtros.setText(QCoreApplication.translate("MainWindow", u"Mas filtros", None))
+        
+        # INICIO: Traducción del LineEdit y el nuevo Botón
         self.line_edit_buscar_corrida.setInputMask("")
         self.line_edit_buscar_corrida.setText("")
         self.line_edit_buscar_corrida.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Burcar por numero o corrida...", None))
+        self.boton_buscar_corrida.setText(QCoreApplication.translate("MainWindow", u"", None))
+        # FIN: Traducción del LineEdit y el nuevo Botón
+        
         self.boton_crear_reservacion.setText(QCoreApplication.translate("MainWindow", u" Crear Reservaci\u00f3n", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"NUMERO", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"FECHA", None))
@@ -582,107 +663,187 @@ class Ui_MainWindow(object):
         self.pasajeros_pushButton.setText(QCoreApplication.translate("MainWindow", u"Pasajeros", None))
         self.reservaciones_pushButton.setText(QCoreApplication.translate("MainWindow", u"Reservaciones", None))
         self.pushButton.setText("")
-    # retranslateUi
+        # retranslateUi
 
-        
-def agregar_reservaciones_tarjeta(self, layout, tipo_servicio, ruta, bus_num, salida, llegada, precio):
-        """
-        Crea y añade una tarjeta de horario al layout dado.
-        """
-        card_frame = QFrame()
-        card_frame.setFrameShape(QFrame.StyledPanel)
-        card_frame.setFrameShadow(QFrame.Plain)
-        card_frame.setObjectName("reservacionCard")
-        card_frame.setStyleSheet("""
-            #reservacionCard {
-                background-color: white;
-                border: 1px solid #d0d0d0;
-                border-radius: 8px;
-                padding: 15px;
-            }
-        """)
-        
-        card_h_layout = QHBoxLayout(card_frame)
-        card_h_layout.setSpacing(10)
-        card_h_layout.setContentsMargins(15, 10, 15, 10) # Relleno interno de la tarjeta
 
-        # Icono/Placeholder de Imagen (izquierda)
-        img_placeholder = QLabel("🖼️") # Puedes reemplazarlo con un QLabel que muestre una QPixmap
-        img_placeholder.setFont(QFont("Arial", 24))
-        img_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        img_placeholder.setFixedSize(60, 60)
-        img_placeholder.setStyleSheet("background-color: #e0e0e0; border-radius: 5px;")
-        card_h_layout.addWidget(img_placeholder)
 
-        # Detalles del Servicio y Ruta (izquierda-centro)
-        service_details_v_layout = QVBoxLayout()
-        lbl_tipo_servicio = QLabel(f"<b>{tipo_servicio}</b>")
-        lbl_tipo_servicio.setFont(QFont("Arial", 12))
-        
-        lbl_ruta_bus = QLabel(f"{ruta}<br>🚌 {bus_num}")
-        lbl_ruta_bus.setFont(QFont("Arial", 10))
-        
-        service_details_v_layout.addWidget(lbl_tipo_servicio)
-        service_details_v_layout.addWidget(lbl_ruta_bus)
-        service_details_v_layout.addStretch(1) # Empuja el texto hacia arriba
-        card_h_layout.addLayout(service_details_v_layout)
-        card_h_layout.addSpacing(20) # Espacio entre servicio y horarios
 
-        # Horarios (Salida y Llegada)
-        times_v_layout = QVBoxLayout()
-        
-        lbl_salida = QLabel(f"<b>Salida:</b> {salida}")
-        lbl_salida.setFont(QFont("Arial", 12))
-        
-        lbl_llegada = QLabel(f"<b>Llegada:</b> {llegada}")
-        lbl_llegada.setFont(QFont("Arial", 12))
-        
-        times_v_layout.addWidget(lbl_salida)
-        times_v_layout.addWidget(lbl_llegada)
-        times_v_layout.addStretch(1) # Empuja los textos hacia arriba
-        card_h_layout.addLayout(times_v_layout)
-        card_h_layout.addStretch(1) # Empuja horarios hacia la izquierda
+from PySide6.QtWidgets import (
+    QFrame, QLabel, QPushButton, QHBoxLayout, QVBoxLayout, QWidget, QScrollArea, QApplication
+)
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtGui import QFont
 
-        # Precio (derecha)
-        price_v_layout = QVBoxLayout()
-        
-        price_frame = QFrame()
-        price_frame.setObjectName("priceFrame")
-        price_frame.setStyleSheet("""
-            #priceFrame {
-                background-color: #e0e0e0;
-                border-radius: 5px;
-                padding: 8px;
-            }
-        """)
-        price_frame_layout = QVBoxLayout(price_frame)
-        lbl_precio_title = QLabel("Precio:")
-        lbl_precio_title.setFont(QFont("Arial", 10))
-        lbl_precio_value = QLabel(f"<b>{precio}</b>")
-        lbl_precio_value.setFont(QFont("Arial", 14, QFont.Bold))
-        lbl_precio_value.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        
-        price_frame_layout.addWidget(lbl_precio_title, alignment=Qt.AlignmentFlag.AlignHCenter)
-        price_frame_layout.addWidget(lbl_precio_value)
-        price_v_layout.addWidget(price_frame)
-        price_v_layout.addStretch(1) # Empuja el precio hacia arriba
-        card_h_layout.addLayout(price_v_layout)
-
-        layout.addWidget(card_frame)
-        
-
-#-----------------CLASE QUE HEREDA ESTA VENTANA PARA MAS FACIL EDICION---------------------#
-class VentanaReservaciones(QMainWindow, Ui_MainWindow):
-     def __init__(self, AppManager):
+class TarjetaReservacion(QFrame):
+    def __init__(self, datos_registro):
         super().__init__()
-        self.controlador_ve_reservaciones = AppManager.controlador_ve_reservaciones
+        
+        # 1. Estilización del QFrame (la tarjeta)
+        self.setFrameShape(QFrame.Shape.Box)
+        self.setFrameShadow(QFrame.Shadow.Raised)
+        self.setLineWidth(1)
+        self.setFixedHeight(40) # Altura fija para la tarjeta
+        self.setStyleSheet("""
+            TarjetaReservacion { 
+                border: 1px solid #ddd; 
+                border-radius: 0px; 
+                margin: 0;
+                padding: 0 30px;
+                background-color: white;
+            }
+                           
+            TarjetaReservacion:hover { 
+                margin: 0;
+                background-color: #E7F1FD;
+            }
+        """)
+
+        # 2. Layout Horizontal (Simula 10 columnas)
+        layout = QHBoxLayout(self)
+        layout.setAlignment(Qt.AlignLeft | Qt.AlignmentFlag.AlignCenter)
+        layout.setContentsMargins(10, 0, 10, 0) # Margen horizontal
+        layout.setSpacing(5) # Espacio reducido entre "columnas"
+
+        # Definición de anchos y datos para 9 Labels
+        # Los anchos son en pixeles. Esto fuerza la "columna" a tener ese tamaño.
+        column_specs = [175,160,185,173,175,180,200,195,120]
+
+        # 3. Crear y añadir los 9 QLabels (Columnas 1 a 9)
+        contador = 0
+        for i in column_specs:    
+            valor = datos_registro[contador]
+            lbl = QLabel(str(valor))
+            contador+=1                    
+            lbl.setMinimumWidth(i)
+            lbl.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+            lbl.setStyleSheet("""
+            QLabel { 
+                border: None;
+                background: transparent;
+            }
+        """)
+            layout.addWidget(lbl)
+        contador = 0
+        contador2 = 0
+
+        # Añadir un Stretch intermedio (opcional) para empujar el botón más a la derecha
+        layout.addStretch(1) 
+
+        # 4. Crear y añadir el QPushButton (Columna 10)
+        btn_acciones = QPushButton() 
+        btn_acciones.setFixedSize(QSize(30, 30)) # Botón pequeño y cuadrado
+        btn_acciones.setIcon(QIcon("recursos/icono_acciones.png"))
+        btn_acciones.setIconSize(QSize(24, 24))  # opcional
+
+        btn_acciones.setCursor(QCursor(Qt.PointingHandCursor))
+        btn_acciones.setStyleSheet("""
+            QPushButton {
+                border-radius: 8px; 
+                border:None;
+                background: transparent;
+            }
+            QPushButton:hover {
+            }
+            QPushButton:pressed {
+                background: #68A6F3;
+
+            }
+        """)
+        
+        # Columna 10
+        layout.addWidget(btn_acciones)
+
+
+
+
+from ui.dialog_mensaje import DialogoMensajePersonalizado
+
+# --- CLASE QUE HEREDA ESTA VENTANA PARA MAS FACIL MANIPULACION -- #
+class VentanaReservaciones(QMainWindow, Ui_MainWindow):
+    def __init__(self, AppManager):
+        super().__init__()
+
         self.setupUi(self)
+        self.controlador_ve_reservaciones = AppManager.controlador_ve_reservaciones
 
-        self.label_total_reservaciones.setText(str(self.controlador_ve_reservaciones.getTotalReservaciones()))        
 
-if __name__ == '__main__':
-        print('Iniciando UI')
-        app = QApplication(sys.argv)
-        ventana = VentanaReservaciones()
-        ventana.show()
-        app.exec()
+        self.label_10.setText('Reservaciones Activas')
+        self.label_11.setText('158')
+        self.label_13.setText('Reservaciones Pasadas')
+        self.label_14.setText('20')
+        self.label_total_reservaciones.setText(str(self.controlador_ve_reservaciones.getTotalReservaciones()))
+
+        self.cargar_registros()
+        #agragando evento a boton buscar
+        self.boton_buscar_corrida.clicked.connect(self.buscar_corrida)
+
+
+    def cargar_registros(self):
+        #self.controlador_ve_reservaciones)
+
+        while self.reservaciones_v_layout.count() > 0:
+            item = self.reservaciones_v_layout.takeAt(0)
+            widget = item.widget()
+            if widget is not None:
+                widget.deleteLater()
+            elif item.spacerItem() is not None:
+                # Si encontramos el stretch, lo volvemos a añadir al final
+                pass    
+
+        for reservacion in self.controlador_ve_reservaciones.consultarTodasReservacionesParaTabla():
+            datos_reservacion = [reservacion[0],reservacion[1],reservacion[2],reservacion[3],
+                                reservacion[4],reservacion[5],reservacion[6],reservacion[7]
+                                ,reservacion[8]]
+            tarjeta = TarjetaReservacion(datos_reservacion)
+            self.reservaciones_v_layout.addWidget(tarjeta)  
+        
+        # El stretch (espaciador) es necesario para que las tarjetas se agrupen en la parte superior.
+        self.reservaciones_v_layout.addStretch(1)
+
+
+    def cargar_registros_despues(self,datos):
+        #self.controlador_ve_reservaciones)
+
+        while self.reservaciones_v_layout.count() > 0:
+            item = self.reservaciones_v_layout.takeAt(0)
+            widget = item.widget()
+            if widget is not None:
+                widget.deleteLater()
+            elif item.spacerItem() is not None:
+                # Si encontramos el stretch, lo volvemos a añadir al final
+                pass    
+
+        for reservacion in datos:
+            datos_reservacion = [reservacion[0],reservacion[1],reservacion[2],reservacion[3],
+                                reservacion[4],reservacion[5],reservacion[6],reservacion[7]
+                                ,reservacion[8]]
+            tarjeta = TarjetaReservacion(datos_reservacion)
+            self.reservaciones_v_layout.addWidget(tarjeta)  
+        
+        # El stretch (espaciador) es necesario para que las tarjetas se agrupen en la parte superior.
+        self.reservaciones_v_layout.addStretch(1)
+
+        """ Este metodo muestra un mesaje personalizado """
+    def mostrar_mensaje_tcn(self,mensaje, tipo="info", parent=None):
+        dialogo = DialogoMensajePersonalizado(mensaje, tipo, parent)
+        dialogo.exec()
+        
+
+    def buscar_corrida(self):
+        #si el usuario ingresa '' es por que quiere de vuelta todos las reservaciones
+        if self.line_edit_buscar_corrida.text() == '':
+            respuesta = self.controlador_ve_reservaciones.consultarTodasReservacionesParaTabla()
+            self.cargar_registros_despues(respuesta)
+            return
+        
+        #checar si el numero fue validado correctamente
+
+        respuesta = self.controlador_ve_reservaciones.buscarReservacionPorNumero(self.line_edit_buscar_corrida.text())
+        if respuesta == False:
+            self.mostrar_mensaje_tcn('Solo se permiten numeros.',tipo="error",parent=self)
+            return
+        self.cargar_registros_despues(respuesta)
+
+    
+
+

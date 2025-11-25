@@ -18,6 +18,12 @@ class ServiciosDeConsulta:
     def consultarCorridasDisponibles(self):
         return self.corrida_dao.consultarCorridasDisponibles()
     
+
+
+
+
+    # --- COnsultas Reservaciones -- #
+    
     def consultarNumeroReservaciones(self):
         try:
             return self.reservacion_dao.getNumeroDeReservaciones()        
@@ -25,3 +31,20 @@ class ServiciosDeConsulta:
             print(f'Error en ServiciosDeConsulta (consultarNumeroReservaciones): {e}')
             raise e
 
+    def consultarTodasReservacionesParaTabla(self):
+        try:
+            reservaciones = []
+            return self.reservacion_dao.getTodasReservacionesParaTabla()
+        except Error as e:
+            print(f'Error en ServiciosDeConsulta (consultarTodasReservaciones): {e}')
+            raise e
+
+    def buscarReservacionPorNumero(self,numero):
+        return self.reservacion_dao.buscarReservacionPorNumero(numero)
+        
+    def llenarTablaReservacionesActuales(self):
+        pass
+    
+    def llenarTablaReservacionesPasadas(self):
+        pass
+    

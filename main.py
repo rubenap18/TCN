@@ -20,7 +20,7 @@ from controladores.controlador_ve_reservaciones import ControladorVEReservacione
 #imports de la interfaz grafica
 #from ui.main_ui import MainUI
 from PySide6.QtWidgets import QApplication
-from ui.ve_ventana_reservaciones import VentanaReservaciones  as MainUI
+from ui.ve_ventana_reservaciones import VentanaReservaciones as MainUI
 
 #imports de utilidades
 from utilidades.app_contenedor import AppContenedor

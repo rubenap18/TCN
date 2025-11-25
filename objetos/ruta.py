@@ -1,7 +1,7 @@
 class Ruta:
 
     #Atributos y constructor
-    def __init__(self,codigo_ruta ,distancia ,origen,destino,):
+    def __init__(self,codigo_ruta ,distancia ,origen,destino):
         self.__codigo_ruta = codigo_ruta
         self.__distancia = distancia
         self.__origen = origen #FK
